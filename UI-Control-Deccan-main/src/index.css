@@ -1,0 +1,71 @@
+/* src/index.css */
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color-light: #6200EE;
+  --secondary-color-light: #f0eaff;
+  --text-color-light: #121212;
+  --background-color-light: #f7f7f7;
+  --card-background-color-light: #ffffff;
+  --border-color-light: #e0e0e0;
+  --shadow-color-light: rgba(0, 0, 0, 0.1);
+
+  --primary-color-dark: #BB86FC;
+  --secondary-color-dark: #1e1e1e;
+  --text-color-dark: #e0e0e0;
+  --background-color-dark: #121212;
+  --card-background-color-dark: #1e1e1e;
+  --border-color-dark: #333333;
+  --shadow-color-dark: rgba(255, 255, 255, 0.08);
+}
+
+body[data-theme='light'] {
+  --primary-color: var(--primary-color-light);
+  --secondary-color: var(--secondary-color-light);
+  --text-color: var(--text-color-light);
+  --background-color: var(--background-color-light);
+  --card-background-color: var(--card-background-color-light);
+  --border-color: var(--border-color-light);
+  --shadow-color: var(--shadow-color-light);
+}
+
+body[data-theme='dark'] {
+  --primary-color: var(--primary-color-dark);
+  --secondary-color: var(--secondary-color-dark);
+  --text-color: var(--text-color-dark);
+  --background-color: var(--background-color-dark);
+  --card-background-color: var(--card-background-color-dark);
+  --border-color: var(--border-color-dark);
+  --shadow-color: var(--shadow-color-dark);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+}

@@ -1,0 +1,70 @@
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--card-background-color);
+  box-shadow: -4px 0 12px var(--shadow-color);
+  animation: slide-in 0.3s forwards;
+  z-index: 1002;
+}
+
+@keyframes slide-in {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.sidebar-header {
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.sidebar-username {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.sidebar-email {
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
+
+.sidebar-body {
+  padding: 2rem;
+}
+
+.sidebar-logout-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

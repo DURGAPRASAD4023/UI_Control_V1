@@ -1,0 +1,92 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.99);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.coin-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+
+.coin {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: flip 2s infinite linear;
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--primary-color);
+  background-color: var(--card-background-color);
+}
+
+.side img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.front {
+  transform: translateZ(2px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(2px);
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.loader-text {
+  color: var(--text-color-dark);
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid var(--primary-color);
+  width: 10ch;
+  animation: 
+    typing 2s steps(10, end) infinite,
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-color); }
+}
